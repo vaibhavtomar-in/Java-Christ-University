@@ -1,0 +1,54 @@
+public class Bank{
+private int accountNo;
+private float balance;
+private String name;
+private String email;
+Bank(int accountNo, float balance, String name, String email){
+this.accountNo = accountNo;
+this.balance  balance;
+this.name = name;
+this.email = email;
+}
+public String getName(){
+return name;
+}
+public String getEmail(){
+return name;
+}
+public int getAccountNumber(){
+return accountNo;
+}
+public float getBalance(){
+return balance;
+}
+public void setName(String name){
+this.name = name;
+}
+public void setEmail(String email){
+this.email = email;
+}
+public void setAccountNo(int accountNo){
+this.accountNo = accountNo;
+}
+public void setBalance(int balance){
+this.balance = balance;
+}
+public void deposit(int deposit){
+balance += deposit;
+System.out.println("money deposited successfully")
+}
+public void withdraw(int withdraw){
+if(withdraw<balance){
+this.balance = balance;
+System.out.println("money withdrawn successfully")
+}
+else{
+System.out.println("Insufficient funds");
+}
+}
+public static main void(String args[]){
+Bank obj1 = newBank(1, 100, "vaibhav", "qwrwe");
+Bank obj2 = newBank(2, 200, "siyona", "fsdg");
+obj1.deposit(100);
+obj2.withdraw(100);
+}
