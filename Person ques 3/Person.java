@@ -34,16 +34,18 @@ public class Person{
 		return (age > 12 & age < 20) ? true : false;
 	}
 	public String getFullName(){
-		return (isEmpty(firstName)|isEmpty(lastName)) ? (isEmpty(firstName) ? lastName : firstName) : firstName + " " + lastName;
+		return (isEmpty(firstName)|isEmpty(lastName)) ? (isEmpty(firstName) & isEmpty(lastName) ? "" : (isEmpty(firstName) ? lastName : firstName)) : firstName + " " + lastName;
 	}
 	public static void main (String args[]){
 		Person person1 = new Person("Vaibhav", "Tomar", 21);
 		Person person2 = new Person("Dhananjay", "Tomar", 15);
 		Person person3 = new Person();
+		Person person4 = new Person();
 		person3.setLastName("Khan");
 		person3.setAge(14);
 		System.out.println("Name : " + person1.getFullName() + ", is teen : " + person1.isTeen());
 		System.out.println("Name : " + person2.getFullName() + ",  is teen : " + person2.isTeen());
 		System.out.println("Name : " + person3.getFullName() + ",  is teen : " + person2.isTeen());
+		System.out.println("Name : " + person4.getFullName() + ",  is teen : " + person4.isTeen());
 	}
 }
